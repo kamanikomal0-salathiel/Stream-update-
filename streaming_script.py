@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # YouTube Stream Key and Main RTMP URL
-YOUTUBE_STREAM_KEY = "xr9t-k4g8-y5vd-us8z-ffz3"
+YOUTUBE_STREAM_KEY = "b06z-4tks-e4yj-aqzx-efck"
 YOUTUBE_RTMP_URL = f"rtmp://a.rtmp.youtube.com/live2/{YOUTUBE_STREAM_KEY}"
 
 # Backup RTMP URL
@@ -32,7 +32,7 @@ def stream_video():
         "-re",  # Real-time streaming
         "-stream_loop", "-1",  # Loop the video indefinitely
         "-i", VIDEO_FILE,  # Input video file
-        "-vf", "scale=1080:1920",  # Resize to 9:16 aspect ratio
+        "-vf", "scale=2560:1440",  # Resize to 9:16 aspect ratio
         "-c:v", "libx264",
         "-preset", "veryfast",
         "-b:v", "6800k",  # Bitrate for video
